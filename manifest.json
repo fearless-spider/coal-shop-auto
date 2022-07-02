@@ -6,6 +6,12 @@
   "background": {
     "service_worker": "background.js"
   },
+  "content_scripts": [
+    {
+      "matches": ["https://sklep.tauron.pl/*"],
+      "js": ["content.js"]    
+    }
+  ],
   "permissions": ["storage", "activeTab", "scripting", "contextMenus"],
   "action": {
     "default_popup": "popup.html",
